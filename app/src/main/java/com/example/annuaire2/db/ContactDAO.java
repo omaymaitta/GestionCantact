@@ -18,6 +18,6 @@ public interface ContactDAO {
     void delete(Contact contact);
     @Update
     void update(Contact contact);
-    @Query("SELECT *  FROM contact where nom=:nom")
-    public Contact getContact (String nom);
+    @Query("SELECT *  FROM contact where id=:id")
+    public Contact getContact (Long id);
 }

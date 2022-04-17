@@ -2,6 +2,7 @@ package com.example.annuaire2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -41,6 +42,9 @@ EditText t5 ;
        contact.phone= t4.getText().toString();
        contact.email= t5.getText().toString();
         db.contactDAO().insertcontact(contact);
-       finish();
+        finish();
+        Intent intent = new Intent(AddNewContact.this, MainActivity.class);
+        startActivity(intent);
+
     }
 }
